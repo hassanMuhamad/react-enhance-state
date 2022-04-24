@@ -1,0 +1,30 @@
+{
+  "name": "react-enhance-state",
+  "version": "1.0.0",
+  "description": "react state utility",
+  "main": "./lib/cjs/index.js",
+  "module": "./lib/esm/index.js",
+  "types": "./lib/esm/index.d.ts",
+  "files": ["./lib"],
+  "scripts": {
+    "start": "cd test && npm start",
+    "build": "npm run build:esm && npm run build:cjs",
+    "build:esm": "tsc",
+    "build:cjs": "tsc --module commonjs --outDir lib/cjs",
+    "publish": "npm run build && npm publish"
+  },
+  "keywords": ["react", "typescript", "react state", "hook"],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/react": "^18.0.6",
+    "@types/react-dom": "^18.0.2",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
+    "typescript": "^4.6.3"
+  },
+  "peerDependencies": {
+    "react": "^18.0.6",
+    "react-dom": "^18.0.2"
+  }
+}
